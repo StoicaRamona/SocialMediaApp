@@ -1,0 +1,28 @@
+.leftSideContent {
+    width:30%;
+    align-items: right;
+    .leftSideWrapper {
+        width: 50%;
+        margin-left: 50%;
+        padding: 0px;
+        .leftIcon {
+            margin-right: 20px;
+            // color: rgb(255, 123, 0);
+            font-size: 2.5rem; 
+        }
+        .leftItemText {
+            font-weight:bold;
+            font-family:Arial, Helvetica, sans-serif
+
+        }
+    } 
+}
+
+@media screen and (max-width: 768px){
+    .leftSideContent {
+        display: none;
+    }
+}
+
+
+

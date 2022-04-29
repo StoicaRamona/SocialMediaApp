@@ -1,0 +1,102 @@
+.newsFeed {
+  display: flex;
+  justify-content: center;
+  .mainDiv {
+    padding: 25px 10px 10px 10px;
+    background-color: white;
+    border: 2px solid grey;
+    margin: 10px;
+    .userInfo {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: #302b28;
+        #profilepic {
+          height: 60px;
+          width: auto;
+        }
+      }
+      .context-menu {
+        position: relative;
+        .context-menu-dropdown {
+          width: 120px;
+          height: auto;
+          position: absolute;
+          // background-color: grey;
+          right: 5px;
+        }
+      }
+    }
+    .post-image {
+      width: 100%;
+      box-sizing: border-box;
+      margin: 15px 0 10px 0;
+    }
+    .likes-shares {
+      display: flex;
+      justify-content: space-between;
+      a {
+        text-decoration: none;
+        font-size: small;
+        color: #302b28;
+      }
+    }
+    .post-reaction {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      margin-top: 15px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid rgb(207, 206, 206);
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color: #302b28;
+      }
+    }
+    .comment-box-container {
+      display: flex;
+      flex-direction: column;
+      margin-top: 15px;
+      .commentContent {
+        width: 100%;
+        input {
+          border: unset;
+          width: 100%;
+          padding: 5px 10px;
+          border-radius: 15px;
+          background-color: lightgoldenrodyellow;
+        }
+      }
+    }
+    .postIcon {
+      margin-right: 5px;;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

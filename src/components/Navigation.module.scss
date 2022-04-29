@@ -1,0 +1,85 @@
+.header {
+    width: 100%;
+    height: 5rem;
+    background-color: teal;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    .logo {
+        font-family: 'Lato', sans-serif;
+        font-size: 2rem;
+        color: white;
+        margin: 0;
+    }
+    .menu {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: baseline;
+    }
+    li {
+        margin: 0 1rem;
+    }
+    a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+    }
+    button {
+        font: inherit;
+        background-color: transparent;
+        border: 1px solid white;
+        color: white;
+        font-weight: bold;
+        padding: 0.5rem 1.5rem;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+    a:hover {
+        color: lightblue;
+    }
+    button:hover {
+        background-color: cadetblue;
+        color: lightblue;
+    }
+}
+
+@media screen and (max-width: 3860px){
+    .topMenu {
+        display: none
+    }
+};
+
+@media screen and (max-width: 768px){
+    nav{
+        display:none;
+    }
+    .topMenu {
+        display: block;
+    }
+
+    .menuLink {
+        text-decoration: none;
+        color: black;
+    }
+    .menuIcon {
+        cursor: pointer;
+    }
+    .header .logo {
+        font-size: 1.3rem;
+    }
+};
+
+
+
+
+
+    

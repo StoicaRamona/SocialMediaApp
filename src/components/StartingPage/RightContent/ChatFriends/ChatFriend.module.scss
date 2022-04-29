@@ -1,0 +1,37 @@
+.rightSideFriend {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    .rightSideProfileContainer {
+        margin-right: 10px;
+        position: relative;
+        .userPicture {
+   
+            width: 45px;
+            height: auto;
+            
+        }
+        .rightSideOnline {
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background-color: green;
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            right: 0;
+            border: 2px solid white;
+        }
+    }
+    .rightSideUserName {
+        font-family:Arial, Helvetica, sans-serif;
+        font-weight: bold;
+    }
+}
+
+
+
+
+
+
+

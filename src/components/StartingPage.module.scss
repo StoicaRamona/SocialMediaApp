@@ -1,0 +1,15 @@
+.mainContainer {
+    display: flex;
+    width: 100%;
+    margin-top: 80px;
+    justify-content: space-between;
+   .newsfeed {
+    width:30%;
+   }
+}
+
+@media screen and (max-width: 768px){
+    .mainContainer .newsfeed {
+        width: 100%
+    }
+}
