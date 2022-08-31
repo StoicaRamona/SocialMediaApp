@@ -117,30 +117,30 @@ const Newsfeed = (props) => {
           </a>
         </div>
         <div className={classes["post-reaction"]}>
-          <div
+          <a
             href="#"
             id={classes["likeButton"]}
             onClick={toggleLikes}
           >
             <FaThumbsUp className={classes.postIcon} />
             <span>Like</span>
-          </div>
-          <div id={classes["commentButton"]}>
+          </a>
+          <a id={classes["commentButton"]}>
             <FaComment className={classes.postIcon} />
             <span>Comment </span>
-          </div>
-          <div
+          </a>
+          <a
             href="#"
             id={classes["shareButton"]}
             onClick={toggleShares}
           >
             <FaShare className={classes.postIcon} />
             <span>Share</span>
-          </div>
+          </a>
         </div>
         <div className={classes["comment-box-container"]}>
           <div className={classes.commentContent}>
-            <input type="text" placeholder="Introduceti comentariul aici..." />
+            <input type="text" placeholder="Write a comment..." />
           </div>
           {props.postData.comments.map((comment) => {
             return <CommentsSection commentData={comment}></CommentsSection>;

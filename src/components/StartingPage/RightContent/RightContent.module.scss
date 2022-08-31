@@ -41,10 +41,10 @@
         .searchNameFilter {
             min-width: 200px;
             padding: 0;
-            height: auto;
-            position: fixed;
-            bottom: 0;
-            right:0;
+            height: 40px;
+            border-radius: 10px;
+            position: absolute;
+            right:60%;
            
         }
         .listOptionRight {

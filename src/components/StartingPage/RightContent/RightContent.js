@@ -41,13 +41,18 @@ function RightContent() {
     });
   };
 
-  const [showFilter, setShowFilter] = useState(false);
+ 
 
-  const toggleFilter = () => {
-    setShowFilter((prevState) => {
+  const [showList, setShowList] = useState(false);
+
+  const toggleList = () => {
+    setShowList((prevState) => {
       return !prevState;
     });
   };
+
+
+  const [query, setQuery] = useState("");
 
   const [visible, setInvisible] = useState(true);
 
@@ -82,25 +87,19 @@ function RightContent() {
         <span>Contacts</span>
         <div className={classes.rightChatIcons}>
           <VideoCallIcon />
-          <SearchIcon onClick={toggleFilter}></SearchIcon>
-          {showFilter && (
-            <Autocomplete
+          <SearchIcon onClick={toggleList}></SearchIcon>
+          {showList && (
+          
+            <input
+              type="text"
+              placeholder="Search..."
               className={classes.searchNameFilter}
-              freeSolo
-              disableClearable
-              options={USERS.map((option) => option.userName)}
-              renderInput={(params) => (
-                <TextField
-                  {...params}
-                  label="Search by name"
-                  InputProps={{
-                    ...params.InputProps,
-                    type: "search",
-                  }}
-                />
-              )}
+              onChange={(e) => setQuery(e.target.value)} 
             />
+           
+
           )}
+ 
           <MoreHorizIcon onClick={toggleOptions}></MoreHorizIcon>
           {showOptions && (
             <ul className={classes.listOptionRight}>
@@ -130,9 +129,11 @@ function RightContent() {
         </div>
       </div>
       <ul className={classes.rightSideFriendList}>
-        {USERS.map((u) => {
-          return <ChatFriend USERS={u} key={u.id} />;
-        })}
+        {USERS.filter((u) => u.userName.toLowerCase().includes(query)).map(
+          (u) => {
+            return <ChatFriend USERS={u} key={u.id} />;
+          }
+        )}
       </ul>
     </div>
   );
